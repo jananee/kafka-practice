@@ -7,8 +7,7 @@ import kafka.consumer.ConsumerConfig
 class Consumer(topic: String) extends Runnable {
 
 val props = new Properties()
-props.put("group.id", "123456")
-props.put("consumer.id", "123456") // This has to be the same between restarts to allow the consumer to continue from the last offset
+props.put("group.id", "12345")
 props.put("auto.commit.enable", "false") // Need this as we want to update the offset after the message is processed
 props.put("zookeeper.connect", "localhost:2181")
 props.put("zookeeper.connection.timeout.ms", "6000")
